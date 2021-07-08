@@ -8,9 +8,17 @@ using FindMaximumProblem;
 
 namespace FindMaximumProblem
 {
-     public class FindMaxAmongThree
+     public class FindMaxAmongThree<T> where T : IComparable
     {
-        public String FindMaxString(String first, String second, String third)
+        {
+        public T first, second, third;
+        public FindMaxAmongThree(T first, T second, T third)
+        {
+            this.first = first;
+            this.second = second;
+            this.third = third;
+        }
+        public static T FindMax(T first, T second, T third)
         {
             if (first.CompareTo(second) > 0 && first.CompareTo(third) > 0)
             {
@@ -29,6 +37,11 @@ namespace FindMaximumProblem
                 Console.WriteLine("All three are same");
                 return default;
             }
+        }
+        public T TestMaximum()
+        {
+            T max = FindMaxAmongThree<T>.FindMax(this.first, this.second, this.third);
+            return max;
         }
     }
 }

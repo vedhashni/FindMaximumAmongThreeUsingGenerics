@@ -8,43 +8,30 @@ namespace UnitTest
     [TestClass]
     public class UnitTest1
     {
-        FindMaxAmongThree three;
-        
+        FindMaxAmongThree<int> maxInt;
+
+        FindMaxAmongThree<float> maxFloat;
+
         [TestInitialize]
         public void SetUp()
         {
-            three = new FindMaxAmongThree();
+            maxInt = new FindMaxAmongThree<int>(10, 20, 30);
+            maxFloat = new FindMaxAmongThree<float>(1.2f, 3.5f, 6.7f);
         }
         [TestMethod]
-        public void TestingFirstString()
+        public void IntMethod()
         {
-            string first = "Orange", second = "Apple", third = "Mango";
-            string expected = first;
-
-            String actual = three.FindMaxString(first, second, third);
-
+            int expected = 30;
+            int actual = maxInt.TestMaximum();
             Assert.AreEqual(expected, actual);
         }
         [TestMethod]
-        public void TestingSecondString()
+        public void TestFloatMethod()
         {
-            string first = "Mango", second = "Orange", third = "Apple";
-            string expected = second;
-
-            String actual = three.FindMaxString(first, second, third);
-
+            float expected = 6.7f;
+            float actual = maxFloat.TestMaximum();
             Assert.AreEqual(expected, actual);
-        }
-        [TestMethod]
-        public void TestingThirdString()
-        {
-            string first = "Mango", second = "Apple", third = "Orange";
-            string expected = third;
-
-
-            String actual = three.FindMaxString(first, second, third);
-
-            Assert.AreEqual(expected, actual);
-        }
+        
+    }
     }
 }

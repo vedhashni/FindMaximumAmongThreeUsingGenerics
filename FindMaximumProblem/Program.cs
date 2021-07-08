@@ -11,6 +11,8 @@ namespace FindMaximumProblem
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Find maximum problem");
+            FindMaxAmongThree obj = new FindMaxAmongThree();
+            obj.FindMax(70, 35, 56);
         }
     }
 }

@@ -16,32 +16,33 @@ namespace UnitTest
             three = new FindMaxAmongThree();
         }
         [TestMethod]
-        public void TestingFirstValue()
+        public void TestingFirstString()
         {
-            float first = 27.5f, second = 18.0f, third = 61.5f;
-            float expected = first;
+            string first = "Orange", second = "Apple", third = "Mango";
+            string expected = first;
 
-            float actual = three.FindMaxfloat(first, second, third);
+            String actual = three.FindMaxString(first, second, third);
 
             Assert.AreEqual(expected, actual);
         }
         [TestMethod]
-        public void TestingSecondValue()
+        public void TestingSecondString()
         {
-            float first = 35.2f, second = 45.2f, third = 72.3f;
-            float expected = second;
+            string first = "Mango", second = "Orange", third = "Apple";
+            string expected = second;
 
-            float actual = three.FindMaxfloat(first, second, third);
+            String actual = three.FindMaxString(first, second, third);
 
             Assert.AreEqual(expected, actual);
         }
         [TestMethod]
-        public void TestingThirdValue()
+        public void TestingThirdString()
         {
-            float first = 30.2f, second = 36.7f, third = 55.3f;
-            float expected = third;
+            string first = "Mango", second = "Apple", third = "Orange";
+            string expected = third;
 
-            float actual = three.FindMaxfloat(first, second, third);
+
+            String actual = three.FindMaxString(first, second, third);
 
             Assert.AreEqual(expected, actual);
         }

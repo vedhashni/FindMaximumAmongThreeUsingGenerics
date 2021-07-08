@@ -10,7 +10,7 @@ namespace FindMaximumProblem
 {
      public class FindMaxAmongThree
     {
-        public float FindMaxfloat(float first, float second, float third)
+        public String FindMaxString(String first, String second, String third)
         {
             if (first.CompareTo(second) > 0 && first.CompareTo(third) > 0)
             {
@@ -27,7 +27,7 @@ namespace FindMaximumProblem
             else
             {
                 Console.WriteLine("All three are same");
-                return -1;
+                return default;
             }
         }
     }

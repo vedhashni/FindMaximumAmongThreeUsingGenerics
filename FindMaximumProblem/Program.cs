@@ -12,7 +12,8 @@ namespace FindMaximumProblem
         {
             Console.WriteLine("Welcome to Find maximum problem");
             FindMaxAmongThree obj = new FindMaxAmongThree();
-            Console.WriteLine("Maximum one : " + obj.FindMaxfloat(90.2f, 25.3f, 56.5f));
+            Console.WriteLine("Maximum string : " + obj.FindMaxString("Apple", "Mango", "Orange"));
+
         }
     }
 }
